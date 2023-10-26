@@ -23,4 +23,4 @@ This project is a prototype app for learning useful information about Pokémons.
 
 #### Visit
 
-https://pokemonapp.vercel.app
+[`Preview: Pokémon App`](https://jessejuwe-pokemon.vercel.app)
