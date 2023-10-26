@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { lazy, Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import { Fallback } from './exports/exports';
+
+/**
+ * Lazy loading components **
+ * De-clutters the DOM by adding components only after it has fully parsed **
+ ***/
+
+const Details = lazy(() => import('./pages/Details/Details'));
+const Error404 = lazy(() => import('./pages/Error404/Error404'));
+const Home = lazy(() => import('./pages/Home/Home'));
+const Pokemons = lazy(() => import('./pages/Pokemons/Pokemons'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense fallback={<Fallback />}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/pokemon-type/:typeId/:pokemonId" element={<Details />} />
+        <Route path="/pokemon-type/:typeId" element={<Pokemons />} />
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+    </Suspense>
   );
 }
 
