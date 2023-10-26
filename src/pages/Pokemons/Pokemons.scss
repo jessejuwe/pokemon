@@ -55,7 +55,7 @@
     }
 
     .pokemons {
-      @apply w-full py-4 flex-wrap gap-4 min-h-[60%];
+      @apply min-h-[60%] w-full py-4 flex-wrap gap-4;
 
       .pokemon {
         @apply rounded shadow-md shadow-black/[0.26] bg-gradient-to-r from-orange-500 to-primary cursor-pointer w-32 h-32;
