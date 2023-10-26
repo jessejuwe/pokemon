@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card {
+    @apply p-6 shadow-md shadow-black/[0.26] rounded bg-white w-full;
+  }
+}
