@@ -22,7 +22,7 @@
       @apply w-full mb-4 gap-1 sm:gap-2 flex-col sm:flex-row;
 
       p {
-        @apply text-white text-center text-xs md:text-base;
+        @apply text-white text-center;
       }
 
       .reset {
@@ -31,10 +31,10 @@
     }
 
     .pokemon-form {
-      @apply w-full;
+      @apply w-full px-5;
 
       form {
-        @apply w-[80%] big:min-w-[450px] big:max-w-lg flex items-center justify-center gap-4;
+        @apply w-full big:w-[80%] big:min-w-[450px] big:max-w-lg flex items-center justify-center gap-2 md:gap-4;
 
         .home {
           @apply text-4xl text-primary cursor-pointer hover:underline hover:text-orange-700;
@@ -55,26 +55,30 @@
     }
 
     .pokemons {
-      @apply min-h-[60%] w-full py-4 flex-wrap gap-4;
+      @apply min-h-[60%] w-full pt-24 pb-4 md:py-8 flex-wrap gap-2 sm:gap-4;
 
       .pokemon {
-        @apply rounded shadow-md shadow-black/[0.26] bg-gradient-to-r from-orange-500 to-primary cursor-pointer w-32 h-32;
+        @apply rounded shadow-md shadow-black/[0.26] bg-gradient-to-r from-orange-500 to-primary cursor-pointer w-16 h-16 sm:w-28 sm:h-28;
 
         p {
-          @apply capitalize text-center text-gray-200 text-lg font-medium;
+          @apply capitalize text-center text-gray-200 text-xs sm:text-lg font-medium;
         }
       }
 
-      .pokemon:nth-child(4n + 1) {
+      .pokemon:nth-child(5n + 1) {
         @apply bg-gradient-to-r from-cyan-500 to-blue-500;
       }
 
-      .pokemon:nth-child(4n + 2) {
+      .pokemon:nth-child(5n + 2) {
         @apply bg-gradient-to-r from-pink-500 to-purple-500;
       }
 
-      .pokemon:nth-child(4n + 3) {
-        @apply from-sky-500 to-indigo-500;
+      .pokemon:nth-child(5n + 3) {
+        @apply bg-gradient-to-r from-sky-500 to-indigo-500;
+      }
+
+      .pokemon:nth-child(5n + 4) {
+        @apply bg-gradient-to-r from-green-500 to-yellow-500;
       }
 
       .not-found {
