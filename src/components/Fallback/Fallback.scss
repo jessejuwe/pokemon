@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .app__fallback {
+    @apply h-screen w-full bg-secondary;
+  }
+
+  .app__bg {
+    @apply bg-[url('../../assets/splash.jpg')] bg-cover bg-center;
+  }
+}

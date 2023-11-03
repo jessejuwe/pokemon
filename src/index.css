@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Lato:wght@400;700&display=swap');
+
+@import './scss/SharedStyles.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 207 93 30;
+    --secondary: 32 60 56;
+  }
+
+  * {
+    @apply box-border scroll-smooth;
+  }
+
+  body {
+    @apply p-0 m-0 overflow-x-hidden font-lato;
+  }
+
+  img {
+    @apply transition duration-500;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+}

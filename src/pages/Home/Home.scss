@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .app__home {
+    @apply bg-secondary w-full h-screen;
+
+    .logo {
+      @apply w-full gap-2 md:gap-4 py-2 mb-2;
+
+      img {
+        @apply w-10 md:w-14;
+      }
+
+      h1 {
+        @apply text-primary;
+      }
+    }
+
+    .description {
+      @apply w-full mb-4;
+
+      p {
+        @apply text-white text-center;
+      }
+    }
+
+    .types {
+      @apply w-full pt-20 pb-4 md:py-4 flex-wrap gap-2 sm:gap-4;
+
+      .type {
+        @apply p-10 rounded shadow-md shadow-black/[0.26] bg-gradient-to-r from-orange-500 to-primary cursor-pointer w-16 h-16 sm:w-36 sm:h-36;
+
+        p {
+          @apply capitalize text-gray-200 text-xs sm:text-lg font-medium;
+        }
+      }
+
+      .type:nth-child(4n + 1) {
+        @apply bg-gradient-to-r from-cyan-500 to-blue-500;
+      }
+
+      .type:nth-child(4n + 2) {
+        @apply bg-gradient-to-r from-pink-500 to-purple-500;
+      }
+
+      .type:nth-child(4n + 3) {
+        @apply bg-gradient-to-r from-green-500 to-yellow-500;
+      }
+    }
+  }
+}

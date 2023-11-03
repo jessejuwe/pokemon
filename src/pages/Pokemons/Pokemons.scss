@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .app__pokemon-type {
+    @apply bg-secondary w-full h-full min-h-screen exLG:h-screen;
+
+    .header {
+      @apply w-full gap-2 md:gap-4 py-2;
+
+      img {
+        @apply w-10 md:w-14;
+      }
+
+      h1 {
+        @apply text-primary capitalize;
+      }
+    }
+
+    .description {
+      @apply w-full mb-4 gap-1 sm:gap-2 flex-col sm:flex-row;
+
+      p {
+        @apply text-white text-center;
+      }
+
+      .reset {
+        @apply text-primary cursor-pointer hover:underline hover:text-orange-700;
+      }
+    }
+
+    .pokemon-form {
+      @apply w-full px-5;
+
+      form {
+        @apply w-full big:w-[80%] big:min-w-[450px] big:max-w-lg flex items-center justify-center gap-2 md:gap-4;
+
+        .home {
+          @apply text-4xl text-primary cursor-pointer hover:underline hover:text-orange-700;
+        }
+
+        input {
+          @apply w-full outline-none rounded bg-[#F4F6FA] text-sm text-gray-900 p-3;
+
+          &::placehoder {
+            @apply text-[#C8C1D1] text-sm;
+          }
+        }
+
+        button {
+          @apply bg-primary hover:bg-orange-700 text-white;
+        }
+      }
+    }
+
+    .pokemons {
+      @apply min-h-[60%] w-full pt-24 pb-4 md:py-8 flex-wrap gap-2 sm:gap-4;
+
+      .pokemon {
+        @apply rounded shadow-md shadow-black/[0.26] bg-gradient-to-r from-orange-500 to-primary cursor-pointer w-16 h-16 sm:w-28 sm:h-28;
+
+        p {
+          @apply capitalize text-center text-gray-200 text-xs sm:text-lg font-medium;
+        }
+      }
+
+      .pokemon:nth-child(5n + 1) {
+        @apply bg-gradient-to-r from-cyan-500 to-blue-500;
+      }
+
+      .pokemon:nth-child(5n + 2) {
+        @apply bg-gradient-to-r from-pink-500 to-purple-500;
+      }
+
+      .pokemon:nth-child(5n + 3) {
+        @apply bg-gradient-to-r from-sky-500 to-indigo-500;
+      }
+
+      .pokemon:nth-child(5n + 4) {
+        @apply bg-gradient-to-r from-green-500 to-yellow-500;
+      }
+
+      .not-found {
+        @apply text-primary;
+      }
+    }
+
+    .pagination-container {
+      @apply w-full flex items-center justify-center gap-4 px-4 pb-4;
+
+      .page-item {
+        @apply w-8 h-8 flex items-center justify-center rounded text-white;
+      }
+
+      .page-item:hover {
+        @apply cursor-pointer bg-gray-900 transition-colors ease-linear;
+      }
+
+      .active-page {
+        @apply text-gray-100 bg-primary pointer-events-none transition-colors ease-linear;
+      }
+
+      .page-link {
+        @apply text-sm sm:text-base;
+      }
+    }
+  }
+}

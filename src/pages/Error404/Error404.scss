@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .app__error {
+    @apply bg-secondary w-full h-screen;
+
+    .error {
+      @apply max-w-lg;
+
+      h3 {
+        @apply text-primary;
+      }
+
+      p {
+        @apply text-white;
+      }
+
+      button {
+        @apply bg-primary hover:bg-orange-700 text-white;
+      }
+    }
+  }
+}
